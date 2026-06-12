@@ -52,6 +52,45 @@ def Ex_03(x):
 
     return result             # Send the completed string back to
                               # wherever the function was called.
+"---------------------------------------------------------------------------------------------------------------------------"
+"Alternative Method"
+"---------------------------------------------------------------------------------------------------------------------------"
+# Practise using the Input function before attempt at code 
+# take three values from user
+name = input("Enter Employee Name: ")
+salary = input("Enter salary: ")
+company = input("Enter Company name: ")
 
+# Display all values on screen
+print("\n")
+print("Printing Employee Details")
+print("Name", "Salary", "Company")
+print(name, salary, company)
+"---------------------------------------------------------------------------------------------------------------------------"
+
+#Attempt 1
+word = input("Enter string: ")
+
+size = len(word)
+return size #This is where this code fails as we are using the return function in the wrong place 
+                #The return function should be used when defining a function and in the place we are not creating a function
+            
+#Attempt 2 
+word = input("Enter a word: ")    #this code successfully returns the length of the word we input
+
+size = len(word)
+print("length of word is:", size)
+
+# Now we want to use a similar idea in the code above, to only return the characters of an even index. 
+# In the above example this would be L,I
+
+#Attempt 3
+word = input("Enter a string:")
+print("Original string", word)
+size = len(word)
+print("Printing only even index chars")
+
+for i in range(0,size-1,2): #Iterating each letter and selecting each even index. This is done by selecting the first letter, and using a step of 2, so only go up in even intervals
+    print("index[", i, "]", word[i])
 print(Ex_03("Pineapple"))      # Print the value returned by the function.
                
